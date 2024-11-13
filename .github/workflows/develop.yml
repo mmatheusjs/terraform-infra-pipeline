@@ -1,0 +1,21 @@
+name: "DEV DEPLOY"
+
+on:
+  push:
+    branches:
+      - develop
+
+# Permission can be added at job level or workflow level
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read # This is required for actions/checkout
+
+jobs:
+  terraform:
+    uses: ./.github/workflows/terraform.yml
+    with:
+      enviroment: dev
+      aws-assume-role-arn: "arn:aws:iam::127214201144:role/github-actions-mmatheusjs-pipeline"
+      aws-region: "sa-east-1"
+      aws-statefile-s3-bucket: "mmatheusjs-sa-east-1-terraform-statefile"
+      aws-lock-dynamodb-table: "mmatheusjs-sa-east-1-terraform-lock"
