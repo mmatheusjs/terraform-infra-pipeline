@@ -18,4 +18,4 @@ jobs:
       aws-assume-role-arn: "arn:aws:iam::127214201144:role/github-actions-mmatheusjs-pipeline"
       aws-region: "sa-east-1"
       aws-statefile-s3-bucket: "mmatheusjs-sa-east-1-terraform-statefile"
-      aws-lock-dynamodb-table: "mmatheusjs-sa-east-1-terraform-lock"
+      aws-lock-dynamodb-table: "mmatheusjs2-sa-east-1-terraform-lock"
