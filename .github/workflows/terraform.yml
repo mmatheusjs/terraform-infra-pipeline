@@ -13,7 +13,7 @@ on:
         type: string
         required: true
       aws-statefile-s3-bucket:
-        type: true
+        type: string
         required: true
       aws-lock-dynamodb-table:
         type: string
