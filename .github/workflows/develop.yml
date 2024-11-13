@@ -14,7 +14,7 @@ jobs:
   terraform:
     uses: ./.github/workflows/terraform.yml
     with:
-      enviroment: "dev"
+      environment: "dev"
       aws-assume-role-arn: "arn:aws:iam::127214201144:role/github-actions-mmatheusjs-pipeline"
       aws-region: "sa-east-1"
       aws-statefile-s3-bucket: "mmatheusjs-sa-east-1-terraform-statefile"
